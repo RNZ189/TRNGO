@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tron Go 19x19 Mockup</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(19, 32px);
+      grid-template-rows: repeat(19, 32px);
+      gap: 0;
+      border: 2px solid #fff;
+    }
+    .cell {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .cell img {
+      width: 28px;
+      height: 28px;
+      pointer-events: none;
+    }
+    /* Hoshi points */
+    .hoshi::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+    }
+    /* Player hand zones */
+    .side-hex {
+      position: absolute;
+      bottom: 40px;
+      right: 80px;
+      width: 120px;
+      height: 120px;
+    }
+    .side-hex-left {
+      bottom: 300px;
+      left: 80px;
+      width: 120px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <!-- Generate board cells -->
+    <!-- Example: first row -->
+    <div class="cell hoshi"><img src="https://rnz189.github.io/TRNGO/1.svg" alt="Hex"></div>
+    <div class="cell"><img src="https://rnz189.github.io/TRNGO/2.svg" alt="Hex"></div>
+    <div class="cell"><img src="https://rnz189.github.io/TRNGO/3.svg" alt="Hex"></div>
+    <div class="cell"><img src="https://rnz189.github.io/TRNGO/4.svg" alt="Hex"></div>
+    <!-- You’ll repeat for all 19×19 cells -->
+  </div>
+
+  <!-- Player hand zones -->
+  <img src="https://rnz189.github.io/TRNGO/1.svg" class="side-hex">
+  <img src="https://rnz189.github.io/TRNGO/2.svg" class="side-hex-left">
+</body>
+</html>
